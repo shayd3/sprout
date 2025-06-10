@@ -31,32 +31,12 @@ A comprehensive indoor and outdoor plant watering tracker and predictor that hel
 
 ## 🚀 Getting Started
 
-Create virtual environment and install dependencies:
-
-```bash
-python -m venv .venv
-source .venv/bin/activate  # On Windows use: .venv\Scripts\activate
-pip install -r requirements.txt
+Create a .env file at the root of the project with the following content:
 ```
-Run the application:
-
-```bash
-fastapi dev app/main.py
+WEATHER_API_KEY=<https://weatherapi.com api key>
 ```
 
-## 📱 Screenshots
-
-*Coming soon - app screenshots and demos*
-
-## 🛠️ Tech Stack
-
-*Coming soon - technology details*
-
-## 🤝 Contributing
-
-*Coming soon - contribution guidelines*
-
-
----
-
-*Keep your plants happy, healthy, and hydrated with Sprout! 🌱*
+To run project locally, run:
+```bash
+uv run fastapi dev --app app
+```
