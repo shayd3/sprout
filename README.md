@@ -5,33 +5,21 @@
 
 A comprehensive indoor and outdoor plant watering tracker and predictor that helps you keep your plants healthy and thriving.
 
-## ✨ Features
-
-### 🪴 Plant Management
-- Track unlimited indoor and outdoor plants
-- Upload and organize photos of your plants
-- Monitor plant health over time
-- Set custom watering schedules
-
-### 🌦️ Weather Integration
-- Automatic weather-based watering predictions for outdoor plants
-- Location-based weather data for your immediate area
-- Historical weather trend analysis
-- Smart recommendations based on local conditions
-
-### 📊 Analytics & Insights
-- Weather history tracking and visualization
-- Plant health trends and analytics
-- Watering pattern analysis
-- Seasonal care recommendations
-
-### 🔮 Future Features
-- **IoT Integration**: Install moisture sensors in plant soil
-- **Real-time Monitoring**: Automated sensor reporting and alerts
 
 ## 🚀 Getting Started
 
-Create a .env file at the root of the project with the following content:
+1. Install depedencies with uv:
+```bash
+uv sync
+```
+
+2. Setup Environmnet Variables
+```bash
+cp .env.example .env
+```
+
+3. Sign up for a free account at WeatherAPI.com
+Add your API key to .env:
 ```
 WEATHER_API_KEY=<https://weatherapi.com api key>
 ```
@@ -40,3 +28,9 @@ To run project locally, run:
 ```bash
 uv run fastapi dev --app app
 ```
+
+## API Documentation
+Once the server is running, visit:
+
+Interactive API Docs: http://localhost:8000/docs
+ReDoc Documentation: http://localhost:8000/redoc
