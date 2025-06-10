@@ -1,0 +1,9 @@
+[project]
+name = "sprout"
+version = "0.1.0"
+description = "A comprehensive indoor and outdoor plant watering tracker and predictor that helps you keep your plants healthy and thriving."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi[standard]>=0.115.12",
+]
