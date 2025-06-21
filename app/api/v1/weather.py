@@ -31,3 +31,45 @@ async def get_current_weather(
         return forecast
     except Exception as e:
         raise HTTPException(status_code=400, detail=f"Failed to fetch weather data: {str(e)}")
+
+@router.get("/recommendation")
+async def get_watering_recommendatiuon(
+    location: str,
+    weather_client: WeatherAPIClient = Depends(get_weather_client)
+):
+    """
+    Get watering recommendation based on current weather conditions for a specified location
+    Args:
+        location (str): The location for which to get the watering recommendation.
+        weather_client (WeatherAPIClient): The weather API client dependency.
+
+    Returns:
+        dict: A dictionary containing the watering recommendation.
+    """
+    return {}
+
+def get_watering_need(forecast: dict) -> str:
+    """
+    Determine the watering need based on the weather forecast.
+
+    Args:
+        forecast (dict): The weather forecast data.
+
+    Returns:
+        str: A string indicating whether to water or not.
+    """
+    # Placeholder logic for watering recommendation
+    pass
+
+def get_watering_reason(forecast: dict) -> str:
+    """
+    Get the reason for the watering recommendation based on the weather forecast.
+
+    Args:
+        forecast (dict): The weather forecast data.
+
+    Returns:
+        str: A string explaining the reason for the watering recommendation.
+    """
+    # Placeholder logic for watering reason
+    pass
